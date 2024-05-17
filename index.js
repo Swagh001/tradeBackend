@@ -1,7 +1,12 @@
 const express = require('express');
 const axios = require('axios');
+
 const app = express();
 const port = 5000;
+
+app.get('/', ( req,res) => {
+  res.send('Welcome to the API server');
+});
 
 app.get('/api', async (req, res) => {
   console.log("in");
